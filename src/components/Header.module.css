@@ -2,9 +2,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 3rem;
-  height: 15rem;
-  padding: 5rem;
+  gap: 2.22rem;
+  height: 11.90rem;
+  padding: 6rem;
   background-color: var(--primary-dark);
 
   position: fixed;
@@ -15,7 +15,7 @@
 }
 
 .container h1 {
-  font-size: 5rem;
+  font-size: 4.50rem;
   font-weight: bolder;
 }
 
@@ -26,11 +26,11 @@
 }
 
 .cartInfo {
-  border-radius: 3rem;
+  border-radius: 1.50rem;
   background-color: var(--primary-light);
   color: var(--primary-contrast-dark);
-  padding: 2rem;
-  font-size: 3rem;
+  padding: 1.50rem;
+  font-size: 2rem;
   font-weight: bold;
   text-align: center;
 }
