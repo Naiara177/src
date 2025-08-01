@@ -54,7 +54,7 @@
 }
 
 .cartItem button:hover {
-  background-color: var(--primary-dark);
+  background-color: var(--gray-500);
 }
 
 .cartItem button:disabled {
