@@ -1,13 +1,26 @@
 import styles from "./Header.module.css";
 import { ShoppingBasket } from "lucide-react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../service/CartContext";
+
 
 export function Header() {
   const { cart } = useContext(CartContext);
 
   return (
+  <>
+    <header className={styles.header}>
+      <nav>
+        <ul>
+          <li><Link to="/">Produtos</Link></li>
+          <li><Link to="/cart">Carrinho</Link></li>
+          <li><Link to="/login">Login</Link></li>
+          <li><Link to="/register">Cadastro</Link></li>
+          <li><Link to="/admin">Admin</Link></li>
+        </ul>
+      </nav>
+    </header>
     <div className={styles.container}>
       <Link to="/" className={styles.link}>
         <h1>TJA Megastore</h1>
@@ -22,7 +35,6 @@ export function Header() {
               </span>
             )}
           </div>
-
           <p>
             Total: ${" "}
             {cart
@@ -35,5 +47,6 @@ export function Header() {
         </div>
       </Link>
     </div>
-  );
+  </>
+);
 }
