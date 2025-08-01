@@ -44,7 +44,7 @@ export function ProductList() {
           onChange={handleSearch}
         />
         <button className={styles.searchButton} onClick={handleClear}>
-          CLEAR
+          Clear
         </button>
       </div>
       <div className={styles.productList}>
@@ -57,7 +57,7 @@ export function ProductList() {
           <CircularProgress
             thickness={5}
             style={{ margin: "2rem auto", display: "block" }}
-            sx={{ color: "#001111" }}
+            sx={{ color: "#000000ff" }}
           />
           <p>Loading products...</p>
         </div>

@@ -21,7 +21,7 @@
 
 .productDescription {
   font-size: 1.85rem;
-  color: var(--primary-dark);
+  color: var(--primary-src);
 }
 
 .productPrice {

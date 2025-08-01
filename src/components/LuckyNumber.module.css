@@ -11,8 +11,8 @@
 }
 
 .button {
-    background-color: var(--primary-contrast-light);
-    color: var(--primary-dark);
+    background-color: var(--primary);
+    color: var(--primary-src);
     border: none;
     padding: 1rem 2rem;
     border-radius: 0.5rem;
@@ -23,7 +23,7 @@
 }
 
 .button:hover {
-    background-color: var(--primary-light);
+    background-color: var(--primary);
     transform: scale(1.05);
 }
 
