@@ -42,11 +42,17 @@
 .link {
   text-decoration: none;
   color: var(--primary);
+  font-size: 2.2rem;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s, transform 0.1s;
 }
 
 .cartIcon {
   position: relative;
   display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center
 }
 
 .cartCount {
@@ -57,7 +63,38 @@
   border-radius: 1rem;
   background-color: var(--primary-src);
   color: var(--gray-100);
-  padding: 0.2rem 0.6rem;
+  padding: 0.3rem 0.6rem;
   font-weight: bold;
   z-index: 1;
+}
+.navLinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.navButton {
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  border-radius: 1.5rem;
+  padding: 1rem 2.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border: 2px solid var(--primary-dark);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2.2rem;
+  cursor: pointer;
+}
+
+.navButton:hover, .navButton:focus {
+  background: var(--primary-dark);
+  color: var(--primary-contrast-dark);
+  transform: translateY(-2px) scale(1.05);
+}
+
+.linkText {
+  font-size: 2.2rem;
+  font-weight: bold;
 }
