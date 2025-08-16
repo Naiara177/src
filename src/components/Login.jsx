@@ -1,4 +1,4 @@
-import styles from "./login.module.css";
+import styles from "./Login.module.css";
 import { useState } from "react";
 
 export function Login({ onLogin }) {

@@ -57,8 +57,8 @@
 
 .cartCount {
   position: absolute;
-  top: -2.75rem;
-  right: -3.4rem;
+  top: -3.60rem;
+  right: -1rem;
   font-size: 1.5rem;
   border-radius: 1rem;
   background-color: var(--primary-src);

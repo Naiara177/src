@@ -1,27 +1,27 @@
 .container {
-  background: var(--primary-light);
+  background: var(--primary-dark);
   color: var(--primary-dark);
   padding: 3rem;
   border-radius: 1rem;
-  max-width: 45rem;
+  max-width: 3rem;
   margin: 10rem auto;
   box-shadow: 0 0 1rem var(--primary-dark);
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-form {
+.form {
   display: flex;
   gap: 1rem;
   margin-bottom: 2rem;
 }
-input {
+.input {
   padding: 0.8rem;
   border-radius: 0.5rem;
   border: 1px solid var(--primary-dark);
   font-size: 1.2rem;
 }
-button {
+.button {
   background: var(--primary-dark);
   color: var(--primary-dark);
   border: none;
@@ -32,11 +32,11 @@ button {
   font-weight: bold;
   margin-left: 0.5rem;
 }
-ul {
+.ul {
   list-style: none;
   padding: 0;
 }
-li {
+.li {
   display: flex;
   align-items: center;
   justify-content: space-between;

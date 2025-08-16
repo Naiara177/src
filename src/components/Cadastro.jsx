@@ -1,5 +1,6 @@
-import styles from "./cadastro.module.css";
+import styles from "./Cadastro.module.css";
 import { useState } from "react";
+import { onRegister } from "react";
 
 export function Cadastro({ onRegister }) {
   const [email, setEmail] = useState("");
@@ -8,7 +9,6 @@ export function Cadastro({ onRegister }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    // Aqui você pode adicionar lógica de cadastro
     if (onRegister) onRegister({ nome, email, senha });
   }
 

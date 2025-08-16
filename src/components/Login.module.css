@@ -1,5 +1,5 @@
 .container {
-  background: var(--primary-light);
+  background: var(--primary);
   color: var(--primary-dark);
   padding: 3rem;
   border-radius: 1rem;
@@ -10,12 +10,12 @@
   flex-direction: column;
   gap: 2rem;
 }
-form {
+.form {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
-input {
+.input {
   padding: 0.8rem;
   border-radius: 0.5rem;
   border: 1px solid var(--primary-dark);

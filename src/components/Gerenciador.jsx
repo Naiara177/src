@@ -1,4 +1,4 @@
-import styles from "./gerenciador.module.css";
+import styles from "./Gerenciador.module.css";
 import { useState } from "react";
 
 export function GerenciadorProdutos() {

@@ -5,9 +5,9 @@ import { Header } from "./components/Header";
 import { Route, Routes } from "react-router";
 import { Cart } from "./components/Cart";
 import { CartProvider } from "./service/CartContext";
-import { Login } from "./components/login";
-import { Cadastro } from "./components/cadastro";
-import { GerenciadorProdutos } from "./components/gerenciador";
+import { Login } from "./components/Login";
+import { Cadastro } from "./components/Cadastro";
+import { GerenciadorProdutos } from "./components/Gerenciador";
 
 export default function App() {
 
@@ -15,7 +15,7 @@ export default function App() {
     <>
       <CartProvider>
         <Header />
-        <div style={{ paddingTop: "17rem" }}>
+        <div style={{ paddingTop: "1rem" }}>
           <Routes>
             <Route path="/" element={<ProductList />} />
             <Route path="/cart" element={<Cart />} />
