@@ -11,15 +11,22 @@ export const CartContext = createContext({
   addToCart: () => { },
   updateQtyCart: () => { },
   clearCart: () => { },
+  // Context to manage user session
+  session: null,
+  sessionLoading: false,
+  sessionMessage: null,
+  sessionError: null,
+  handleSignUp: () => { },
+  handleSignIn: () => { },
+  handleSignOut: () => { }, 
 });
 
 export function CartProvider({ children }) {
-
-
-
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+
 
   useEffect(() => {
     async function fetchProductsSupabase() {
@@ -79,6 +86,80 @@ export function CartProvider({ children }) {
     setCart([]);
   }
 
+  const [session, setSession] = useState(null);
+  const [seetionLoading, setSessionLoading] = useState(false);
+  const [sessionMessage, setSessionMessage] = useState(null);
+  const [sessionError, setSessionErro] = useState(null);
+
+    async function handleSingnUp (email, password, username){
+      setSessionLoading(true);
+      setSessionMessage(null);
+      setSessionErro(null);
+      
+      try {
+      const { data, error } = await supabase.auth.signUp({
+        email: email,
+        password: password,
+        options: {
+          data: {
+            username: username,
+            admin: false,
+          },
+          emailRedirectTo: `{window.location.origin}/signin`
+        },
+      });
+      if (error) throw error;
+
+      if (data.user) {
+       setSessionMessage("Registration sucessful! Check your email to confirm your account.");
+      window.location.href = "/signin"; }
+      } catch (error) {
+        setSessionErro(error.message);
+      } finally {
+        setSessionLoading(false);
+    }
+  }
+    async function handleSingnIn (email, password){setSessionLoading(true) }
+      setSessionLoading(true);
+      setSessionMessage(null);
+      setSessionErro(null);
+      
+       try {
+        const {data, error} = await supabase.auth.signInWithPassword({
+          email,
+          password,
+        });
+        if (error) throw error;
+
+        if (data.session) {
+          setSession(data.session);
+          setSessionMessage("Sing in successful!");
+        }
+
+      } catch (error) {
+        setSessionErro(error.message);
+      } finally {
+        setSessionLoading(false);
+    }
+
+    async function handleSingnOut (){
+      setSessionLoading(true);
+      setSessionMessage(null);
+      setSessionErro(null);
+      
+    try {
+      const { error } = await supabase.auth.signOut();
+
+      if (error) throw error;
+      setSession(null);
+      window.location.href = "/";
+
+      } catch (error) {
+        setSessionErro(error.message);
+      } finally {
+        setSessionLoading(false);
+    }
+  }
   const context = {
     products: products,
     loading: loading,
@@ -87,9 +168,17 @@ export function CartProvider({ children }) {
     addToCart: addToCart,
     updateQtyCart: updateQtyCart,
     clearCart: clearCart,
+
+  session: session,
+  sessionLoading: seetionLoading,
+  sessionMessage: sessionMessage,
+  sessionError: sessionError,
+  handleSignUp: handleSingnUp,
+  handleSignIn: handleSingnIn,
+  handleSignOut: handleSingnOut, 
   };
 
   return (
     <CartContext.Provider value={context}>{children}</CartContext.Provider>
   );
-}
+    }
