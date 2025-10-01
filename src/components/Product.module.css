@@ -1,10 +1,10 @@
 .productCard {
   border: 0.25rem solid var(--primary);
   border-radius: 5rem;
-  padding: 1rem;
+  padding: 2rem;
   text-align: center;
   background-color: var(--gray-100);
-    /* width: 40rem; */
+  /* width: 40rem; */
 }
 
 .productImage {
@@ -20,8 +20,8 @@
 }
 
 .productDescription {
-  font-size: 1.85rem;
-  color: var(--primary-src);
+  font-size: 2rem;
+  color: var(--primary-dark);
 }
 
 .productPrice {
@@ -41,5 +41,5 @@
 }
 
 .productButton:hover {
-  background-color: var(--gray-500);
+  background-color: var(--primary-dark);
 }

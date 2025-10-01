@@ -8,8 +8,8 @@
 
 .card {
   height: 20rem;
-  background-color: var(--primary-src);
-  color: var(--primary);
+  background-color: var(--primary-dark);
+  color: var(--primary-contrast-light);
   padding: 1rem;
   border-radius: 1rem;
   box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5);

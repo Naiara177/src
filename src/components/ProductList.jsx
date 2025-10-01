@@ -6,7 +6,7 @@ import { CartContext } from "../context/CartContext";
 
 export function ProductList() {
   
-   const { products, loading, error } = useContext(CartContext);
+  const { products, loading, error } = useContext(CartContext);
 
   const [filteredProducts, setFilteredProducts] = useState([]);
 
@@ -44,7 +44,7 @@ export function ProductList() {
           onChange={handleSearch}
         />
         <button className={styles.searchButton} onClick={handleClear}>
-          Clear
+          CLEAR
         </button>
       </div>
       <div className={styles.productList}>
@@ -57,12 +57,12 @@ export function ProductList() {
           <CircularProgress
             thickness={5}
             style={{ margin: "2rem auto", display: "block" }}
-            sx={{ color: "#000000ff" }}
+            sx={{ color: "#001111" }}
           />
           <p>Loading products...</p>
         </div>
       )}
-      {error && <p> ❌ {erro}</p>}
+      {error && <p>❌ {error}</p>}
     </div>
   );
 }

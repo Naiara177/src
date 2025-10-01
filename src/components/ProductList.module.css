@@ -8,10 +8,10 @@
 }
 
 .productList {
-  padding: 1rem 2rem;
+  padding: 1rem 3rem;
   display: grid;
   gap: 3rem;
-  grid-template-columns: repeat(auto-fit, minmax(25.5rem, 1.50fr));
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   grid-template-rows: repeat(auto-fit, min-content);
 }
 
@@ -39,14 +39,14 @@
   background-color: var(--primary);
   color: var(--gray-900);
   border: none;
-  padding: 0.50rem 1.50rem;
+  padding: 1rem 2rem;
   border-radius: 1rem;
   cursor: pointer;
-  font-size: 2.50rem;
+  font-size: 2rem;
   font-weight: bold;
   border: 0.25rem solid var(--gray-900);
 }
 
 .searchButton:hover {
-  background-color: var(--primary-src);
+  background-color: var(--primary-dark);
 }

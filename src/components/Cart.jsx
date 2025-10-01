@@ -49,7 +49,7 @@ export function Cart() {
       )}
       {cart.length > 0 && (
         <button onClick={clearCart} className={styles.removeButton}>
-          Clear Cart <Trash />
+          CLEAR CART <Trash />
         </button>
       )}
     </div>
