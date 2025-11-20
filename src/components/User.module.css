@@ -37,3 +37,41 @@
 .button:hover {
   background-color: var(--primary-dark);
 }
+
+.adminForm {
+  display: grid;
+  gap: 0.6rem;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  margin-bottom: 1.2rem;
+}
+.adminForm input, .adminForm textarea {
+  padding: 0.6rem;
+  border-radius: 0.4rem;
+  border: 1px solid rgba(0,0,0,0.08);
+  font-size: 1.2rem;
+}
+.adminForm textarea { grid-column: 1 / -1; min-height: 8rem; resize: vertical; }
+.adminForm button {
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+.adminForm button[type="submit"] { background: var(--primary); color: var(--background); }
+.adminForm button[type="button"] { background: #eee; color: #222; }
+
+/* Admin item list */
+.adminItem {
+  display: flex;
+  gap: 1rem;
+  padding: 0.8rem;
+  border-radius: 0.6rem;
+  align-items: center;
+  border: 1px solid rgba(0,0,0,0.04);
+  margin-bottom: 0.6rem;
+}
+.adminItem img { width: 6rem; height: 6rem; object-fit: cover; border-radius: 0.4rem; }
+.adminItem button { margin-right: 0.4rem; padding: 0.4rem 0.6rem; border-radius: 0.4rem; border: none; cursor: pointer; }
+.adminItem button:first-of-type { background: #ffd; }
+.adminItem button:last-of-type { background: #fdd; }
