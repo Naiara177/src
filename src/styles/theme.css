@@ -35,4 +35,43 @@ html, body {
 .container, .card, .adminDropdown, .cartPreview {
   background: var(--card-bg);
   transition: background-color 180ms ease, color 180ms ease;
+}:root {
+  --primary: #b28df6; /* lilás pastel elegante */
+  --primary-dark: #8e6bd6; /* roxo médio */
+  --primary-light: rgba(178, 141, 246, 0.12); /* brilho lilás */
+  --primary-contrast-dark: #ffffff;
+
+  --background: #faf7ff; /* quase branco com lilás */
+  --text: #3a1b5f; /* roxo escuro */
+  --muted: #7a6794; /* roxo acinzentado */
+  
+  --gray-100: #f4edff;
+  --gray-900: #2a0d44;
+
+  --card-bg: #ffffff; /* cards brancos e limpos */
+}
+
+/* 🌙 Tema dark em roxo: elegante e feminino */
+[data-theme="dark"] {
+  --primary: #c9a8ff; /* lilás luminoso */
+  --primary-dark: #a585e6;
+  --primary-light: rgba(201, 168, 255, 0.18);
+
+  --primary-contrast-dark: #ffffff;
+  --background: #1b0f29; /* roxo profundo */
+  --text: #f2e8ff; /* lavanda clara */
+  --muted: #b9a3d3;
+
+  --gray-100: #2d1a41;
+  --gray-900: #12081d;
+
+  --card-bg: #241631; /* roxo escuro chique */
+}
+
+/* efeitos gerais */
+.container, .card, .adminDropdown, .cartPreview {
+  background: var(--card-bg);
+  transition: background-color 180ms ease, color 180ms ease;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(178, 141, 246, 0.18);
 }
